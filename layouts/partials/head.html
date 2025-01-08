@@ -15,9 +15,19 @@
 {{- partial "prepended_head.html" . }}
 
 <!-- Theme CSS -->
-{{ $res := resources.Get "css/style.scss" }}
-{{ $style := $res | resources.ToCSS }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+{{ with resources.Get "sass/style.scss" }}
+  {{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
+  {{ with . | toCSS $opts }}
+    {{ if hugo.IsDevelopment }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ else }}
+      {{ with . | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
 <!-- Custom CSS to override theme properties (/static/style.css) -->
 <link rel="stylesheet" href="{{ "style.css" | absURL }}" />
 
