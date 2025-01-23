@@ -1,18 +1,18 @@
-@import 'variables';
+@use 'variables';
 
-@import 'fonts';
-@import 'buttons';
+@use 'fonts';
+@use 'buttons';
 
-@import 'header';
-@import 'logo';
-@import 'menu';
-@import 'main';
-@import 'post';
-@import 'pagination';
-@import 'footer';
+@use 'header';
+@use 'logo';
+@use 'menu';
+@use 'main';
+@use 'post';
+@use 'pagination';
+@use 'footer';
 
-@import 'terms';
-@import 'archive';
+@use 'terms';
+@use 'archive';
 
-@import 'prism';
-@import 'code';
+@use 'prism';
+@use 'code';

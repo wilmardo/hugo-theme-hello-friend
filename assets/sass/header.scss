@@ -1,3 +1,5 @@
+@use "variables";
+
 .header {
   background: var(--header);
   display: flex;
@@ -11,7 +13,7 @@
     flex-direction: row;
     align-items: center;
 
-    @media ($phone) {
+    @media (variables.$phone) {
       flex-direction: row-reverse;
     }
   }

@@ -1,3 +1,5 @@
+@use "variables";
+
 @mixin menu {
   position: absolute;
   background: var(--header);
@@ -18,7 +20,7 @@
   padding-right: 24px;
   font-weight: 500;
 
-  @media ($phone) {
+  @media (variables.$phone) {
     @include menu;
     border: none;
     top: 50px;
@@ -39,7 +41,7 @@
     padding: 0;
 
     &--desktop {
-      @media ($phone) {
+      @media (variables.$phone) {
         display: none;
       }
     }
@@ -47,7 +49,7 @@
     &--mobile {
       display: none;
 
-      @media ($phone) {
+      @media (variables.$phone) {
         display: block;
       }
     }
@@ -61,7 +63,7 @@
       }
     }
 
-    @media ($phone) {
+    @media (variables.$phone) {
       flex-direction: column;
       align-items: flex-start;
       padding: 0;
@@ -101,7 +103,7 @@
           transform: rotate(90deg);
           line-height: 1;
 
-          @include greater-icon(5px);
+          @include variables.greater-icon(5px);
         }
       }
 

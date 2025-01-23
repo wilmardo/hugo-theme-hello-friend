@@ -1,3 +1,5 @@
+@use "variables";
+
 html {
   box-sizing: border-box;
 }
@@ -23,7 +25,7 @@ body {
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
 
-  @media ($phone) {
+  @media (variables.$phone) {
     font-size: 1rem;
   }
 }
@@ -48,7 +50,7 @@ h4 {
   font-size: 1.125rem;
 }
 
-@media ($phone) {
+@media (variables.$phone) {
   h1 {
     font-size: 2rem;
   }
@@ -150,7 +152,7 @@ pre {
   font-size: .9rem;
   overflow: auto;
 
-  @media ($phone) {
+  @media (variables.$phone) {
     white-space: pre-wrap;
     word-wrap: break-word;
   }
@@ -170,7 +172,7 @@ blockquote {
   margin: 40px;
   padding: 10px 20px;
 
-  @media ($phone) {
+  @media (variables.$phone) {
     margin: 10px;
     padding: 10px;
   }
@@ -216,7 +218,7 @@ ul, ol {
   margin-left: 40px;
   padding: 0;
 
-  @media ($phone) {
+  @media (variables.$phone) {
     margin-left: 20px;
   }
 }
@@ -239,7 +241,7 @@ ol ol {
   justify-content: center;
   margin: 50px 0;
 
-  @media ($phone) {
+  @media (variables.$phone) {
     margin-top: 0;
   }
 }
@@ -263,7 +265,7 @@ hr {
   width: 100%;
   max-width: 860px;
 
-  @media ($tablet) {
+  @media (variables.$tablet) {
     width: auto;
     max-width: 680px;
     margin: 20px 20px 40px;

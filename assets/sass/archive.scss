@@ -1,3 +1,5 @@
+@use "variables";
+
 .archive {
   width: 100%;
   max-width: 800px;
@@ -11,7 +13,7 @@
       align-items: flex-start;
       padding: 10px 0;
 
-      @media ($phone) {
+      @media (variables.$phone) {
         flex-direction: column;
       }
 
@@ -23,7 +25,7 @@
     &-year {
       margin-top: 40px;
 
-      @media ($phone) {
+      @media (variables.$phone) {
         margin-top: 20px;
       }
 
@@ -42,7 +44,7 @@
         width: 200px;
         opacity: .5;
 
-        @media ($phone) {
+        @media (variables.$phone) {
           margin: 10px 0 0;
         }
       }

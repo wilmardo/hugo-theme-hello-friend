@@ -1,3 +1,5 @@
+@use "variables";
+
 .post {
   width: 100%;
   max-width: 800px;
@@ -5,7 +7,7 @@
   padding: 20px;
   margin: 20px auto;
 
-  @media ($tablet) {
+  @media (variables.$tablet) {
     max-width: 660px;
   }
 
@@ -17,7 +19,7 @@
     font-size: 1rem;
     margin-bottom: 10px;
 
-    @media ($phone) {
+    @media (variables.$phone) {
       font-size: .85rem;
     }
   }
@@ -26,7 +28,7 @@
     font-size: 2.625rem;
     margin: 0 0 20px;
 
-    @media ($phone) {
+    @media (variables.$phone) {
       font-size: 2rem;
     }
 
@@ -61,7 +63,7 @@
       box-shadow: 0 12px 40px rgba(0, 0, 0, .15);
     }
 
-    @media ($tablet) {
+    @media (variables.$tablet) {
       margin: 20px 0;
       width: 100%;
     }

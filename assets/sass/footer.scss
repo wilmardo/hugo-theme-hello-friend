@@ -1,3 +1,5 @@
+@use "variables";
+
 .footer {
   padding: 40px 20px;
   flex-grow: 0;
@@ -11,7 +13,7 @@
     width: 760px;
     max-width: 100%;
 
-    @media ($tablet) {
+    @media (variables.$tablet) {
       flex-direction: column;
     }
   }
@@ -36,14 +38,14 @@
       padding-right: 10px;
       margin-right: 10px;
 
-       @media ($tablet) {
+       @media (variables.$tablet) {
         border: none;
         padding: 0;
         margin: 0;
       }
     }
 
-    @media ($tablet) {
+    @media (variables.$tablet) {
       flex-direction: column;
       margin-top: 10px;
     }
