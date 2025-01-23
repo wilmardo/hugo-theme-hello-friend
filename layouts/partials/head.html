@@ -16,15 +16,13 @@
 
 <!-- Theme CSS -->
 {{ with resources.Get "sass/style.scss" }}
-  {{ $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
-  {{ with . | toCSS $opts }}
-    {{ if hugo.IsDevelopment }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}">
-    {{ else }}
-      {{ with . | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-      {{ end }}
-    {{ end }}
+  {{ $opts := dict
+    "transpiler" "dartsass"
+    "targetPath" "css/style.css"
+    "enableSourceMap" (not hugo.IsProduction)
+  }}
+  {{ with resources.Get "sass/main.scss" | toCSS $opts | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{ end }}
 {{ end }}
 
