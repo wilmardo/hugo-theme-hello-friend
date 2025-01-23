@@ -29,12 +29,12 @@
     "yarn": "^1.22.10"
   },
   "devDependencies": {
-    "browserslist": "^4.16.5",
+    "browserslist": "^4.24.4",
     "clipboard": "^2.0.4",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "husky": "^9.0.11"
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "husky": "^9.1.7"
   },
   "husky": {
     "hooks": {
